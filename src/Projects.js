@@ -3,7 +3,7 @@ import Trinetra from './assets/images/Trinetra.png';
 import FarmAI from './assets/images/FarmAI.png';
 import HeartDisease from './assets/images/Heart_disease.png';
 import FoodOrdering from './assets/images/Food_ordering.png';
-// import Portfolio from './assets/images/Portfolio.png';
+import Portfolio from './assets/images/Portfolio.png';
 import AeroBMSCE from './assets/images/AeroBMSCE.png';
 import DigiMelody from './assets/images/DigiMelody.png';
 
@@ -87,7 +87,7 @@ const Projects = () => {
             tech: ["React", "CSS", "JavaScript"],
             github: "YOUR_GITHUB_LINK",
             demo: "YOUR_PORTFOLIO_LINK",
-            image: "https://via.placeholder.com/400x300.png?text=Portfolio+Image",
+            image: Portfolio,
             description:
                 "Personal portfolio website showcasing projects, skills, achievements, and technical journey with a modern responsive design."
         },
