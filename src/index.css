@@ -265,7 +265,7 @@ a {
 
 .project-card:hover{
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 20px rgba(177, 176, 176, 0.3);
 }
 
 .project-card h3{
@@ -284,7 +284,6 @@ a {
   padding: 6px 12px;
   border-radius: 20px;
   border: 1px solid #dbcd35;
-  /* color: #dbcd35; */
   font-size: 13px;
 }
 
@@ -298,6 +297,12 @@ a {
   padding: 10px 20px;
   border-radius: 5px;
   background-color: #dbcd35;
+}
+
+.project-card a:hover{
+  background-color: transparent;
+  color: #dbcd35;
+  border: 1px solid #dbcd35;
 }
 
 .project-card img{
@@ -388,4 +393,106 @@ a {
   .education-card h3 {
     font-size: 20px;
   }
+}
+
+.notfound{
+  color: #000;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 40px;
+}
+
+.notfound a{
+  color: #000;
+}
+
+.notfound a:hover{
+  color: red;
+}
+
+.certificates{
+  color:#fff;
+}
+
+.certificates h2{
+  font-size: 40px;
+  font-weight: 400;
+  font-family: 'Times New Roman', Times, serif;
+  color: #f4ff1c;
+}
+
+.certificates p{
+  font-size: 1.2em;
+  /* width: 80%; */
+  margin-top: 20px;
+  line-height: 1.5;
+  /* text-align: center; */
+}
+
+/* Container */
+.certificate-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  padding: 30px;
+}
+
+/* Card */
+.certificate {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+}
+
+.certificate:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 20px rgba(196, 196, 196, 0.35);
+}
+
+.certificate-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Details */
+.certificate-details {
+  padding: 20px;
+}
+
+.certificate-details h3 {
+  color: #f4ff1c;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.certificate-details p {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.certificate-details a{
+  margin-top: 0px;
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #dbcd35;
+  color: #051650;
+  border: 1px solid #dbcd35;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 300;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+
+.certificate-details a:hover{
+  background-color: transparent;
+  color: #dbcd35;
+  border: 1px solid #dbcd35;
 }
