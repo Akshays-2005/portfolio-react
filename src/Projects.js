@@ -6,6 +6,8 @@ import FoodOrdering from './assets/images/Food_ordering.png';
 import Portfolio from './assets/images/Portfolio.png';
 import AeroBMSCE from './assets/images/AeroBMSCE.png';
 import DigiMelody from './assets/images/DigiMelody.png';
+import OmniFood from './assets/images/OmniFood.png';
+import AutoAlignDoc from './assets/images/AutoDoc align.png';
 
 const Projects = () => {
     const projects = [
@@ -75,7 +77,7 @@ const Projects = () => {
             category: "Web Development",
             tech: ["React", "CSS", "JavaScript"],
             github: "https://github.com/Akshays-2005/portfolio-react",
-            demo: "https://akshays-portfolio-2025.netlify.app/#",
+            demo: "https://akshay-portfolio-react.netlify.app/",
             image: Portfolio,
             description:
                 "Personal portfolio website showcasing projects, skills, achievements, and technical journey with a modern responsive design."
@@ -93,6 +95,28 @@ const Projects = () => {
         },
         {
             id: 7,
+            title: "AutoAlign Doc",
+            category: "Document Automation / Frontend",
+            tech: ["HTML", "CSS", "JavaScript"],
+            github: "https://github.com/Akshays-2005/autoscan-pro",
+            demo: "https://autoalign-doc.netlify.app/",
+            image: AutoAlignDoc,
+            description:
+                "Document formatting automation tool designed to simplify content alignment, improve consistency, and streamline structured document creation through an intuitive web interface."
+        },
+        {
+            id: 8,
+            title: "OmniFood",
+            category: "Frontend Practice Project",
+            tech: ["HTML", "CSS", "JavaScript"],
+            github: "https://github.com/Akshays-2005/OmniFood",
+            demo: "https://omni-food-killer-website.netlify.app/",
+            image: OmniFood,
+            description:
+                "Responsive food delivery landing page built while learning frontend development, focusing on modern UI design, layouts, and responsive web practices."
+        },
+        {
+            id: 9,
             title: "DigiMelody",
             category: "Web Development",
             tech: ["HTML", "CSS", "JavaScript"],
@@ -103,7 +127,7 @@ const Projects = () => {
                 "A modern music streaming-inspired web application featuring an intuitive user interface, music discovery experience, responsive layouts, and interactive media controls."
         },
         {
-            id: 8,
+            id: 10,
             title: "Trinetra",
             category: "AI / Healthcare",
             tech: ["HTML", "CSS", "JavaScript", "Gemini API", "Twilio"],
