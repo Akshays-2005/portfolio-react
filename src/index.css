@@ -496,3 +496,95 @@ a {
   color: #dbcd35;
   border: 1px solid #dbcd35;
 }
+
+.contact {
+  padding: 60px 10%;
+  color: white;
+}
+
+.contact h2 {
+  font-size: 42px;
+  margin-bottom: 40px;
+  color:#dbcd35;
+}
+
+/* Main layout */
+.contact-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Left side */
+.contact-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Contact cards */
+.contact-card {
+  padding: 25px;
+  border-radius: 18px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.contact-card h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  font-size: 18px;
+  color: #d9d9d9;
+}
+
+/* Right form side */
+.contact-right {
+  flex: 1;
+  padding: 35px;
+  border-radius: 18px;
+}
+
+/* Form styling */
+.contact-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-right input,
+.contact-right textarea {
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: transparent;
+  color: white;
+  font-size: 16px;
+}
+
+.contact-right textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+.contact-right button {
+  padding: 18px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #dbcd35;
+}
+
+.contact-right button:hover {
+  background-color: transparent;
+  color: #dbcd35;
+  border: 1px solid #dbcd35;
+}

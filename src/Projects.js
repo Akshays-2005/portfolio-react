@@ -14,25 +14,14 @@ const Projects = () => {
             title: "EduBuddy",
             category: "AI / Hackathon",
             tech: ["HTML", "CSS", "JavaScript", "Gemini API"],
-            github: "YOUR_GITHUB_LINK",
-            demo: "YOUR_DEMO_LINK",
+            github: "https://github.com/Akshays-2005/EduBuddy-Study-Assistant",
+            demo: "https://alpha345.pythonanywhere.com/",
             image: EduBuddy,
             description:
                 "AI-powered personal study assistant that helps students stay focused, track study sessions, and receive intelligent learning support."
         },
         {
             id: 2,
-            title: "Trinetra",
-            category: "AI / Healthcare",
-            tech: ["HTML", "CSS", "JavaScript", "Gemini API", "Twilio"],
-            github: "YOUR_GITHUB_LINK",
-            demo: "YOUR_DEMO_LINK",
-            image: Trinetra,
-            description:
-                "AI-powered medical assistant that analyzes symptoms, classifies urgency levels, recommends doctors, and sends appointment reminders."
-        },
-        {
-            id: 3,
             title: "FarmAI",
             category: "AI / Agriculture",
             tech: [
@@ -44,14 +33,14 @@ const Projects = () => {
                 "OpenWeather API",
                 "Agmarknet API"
             ],
-            github: "YOUR_GITHUB_LINK",
-            demo: "YOUR_DEMO_LINK",
+            github: "https://github.com/Akshays-2005/FarmAI",
+            demo: "https://drive.google.com/file/d/1hDVCdpgQGv7_CIusTN8kHLwOAL9gM3WH/view",
             image: FarmAI,
             description:
                 "Smart crop diversification advisor that helps farmers choose profitable crop combinations using weather and market insights."
         },
         {
-            id: 4,
+            id: 3,
             title: "Heart Disease Prediction System",
             category: "Machine Learning",
             tech: [
@@ -63,55 +52,66 @@ const Projects = () => {
                 "CSS",
                 "JavaScript"
             ],
-            github: "YOUR_GITHUB_LINK",
-            demo: "YOUR_DEMO_LINK",
+            github: "https://github.com/Akshays-2005/Heart-Disease-Risk-Prediction",
+            demo: "https://drive.google.com/file/d/1pgbjG-A2f1jVqMUwP4ThTw1foQUmuwVU/view",
             image: HeartDisease,
             description:
                 "Machine learning application that predicts heart disease risk using clinical inputs and provides real-time prediction results."
         },
         {
-            id: 5,
+            id: 4,
             title: "Food Ordering System",
             category: "Unix Shell Project",
             tech: ["Shell Scripting", "Python", "SMTP"],
-            github: "YOUR_GITHUB_LINK",
-            demo: "",
+            github: "https://github.com/Akshays-2005/Unix-Food-Ordering-System",
+            demo: "https://drive.google.com/file/d/1Mbup_4uWJNJFmxlwL8GmeAoZHUlhpI4z/view",
             image: FoodOrdering,
             description:
                 "Automated food ordering system developed using shell scripts and Python with email-based order confirmation."
         },
         {
-            id: 6,
+            id: 5,
             title: "Personal Portfolio",
             category: "Web Development",
             tech: ["React", "CSS", "JavaScript"],
-            github: "YOUR_GITHUB_LINK",
-            demo: "YOUR_PORTFOLIO_LINK",
+            github: "https://github.com/Akshays-2005/portfolio-react",
+            demo: "https://akshays-portfolio-2025.netlify.app/#",
             image: Portfolio,
             description:
                 "Personal portfolio website showcasing projects, skills, achievements, and technical journey with a modern responsive design."
         },
         {
-            id: 7,
+            id: 6,
             title: "AeroBMSCE Website",
             category: "Web Development",
             tech: ["HTML", "CSS", "JavaScript"],
-            github: "YOUR_GITHUB_LINK",
-            demo: "YOUR_DEMO_LINK",
+            github: "https://github.com/Akshays-2005/AeroBMSCE-Website",
+            demo: "https://aerobmscewebsite.netlify.app/",
             image: AeroBMSCE,
             description:
                 "Frontend website developed for the AeroBMSCE Web Development Challenge. Features responsive design, project showcases, team information, gallery sections, and interactive UI components."
         },
         {
-            id: 8,
+            id: 7,
             title: "DigiMelody",
             category: "Web Development",
             tech: ["HTML", "CSS", "JavaScript"],
-            github: "YOUR_GITHUB_LINK",
-            demo: "YOUR_DEMO_LINK",
+            github: "https://github.com/Akshays-2005/DigiMelody",
+            demo: "https://drive.google.com/file/d/1e_CyeuOBubThx5UsDMchBBM730wk8LrB/view?usp=sharing",
             image: DigiMelody,
             description:
                 "A modern music streaming-inspired web application featuring an intuitive user interface, music discovery experience, responsive layouts, and interactive media controls."
+        },
+        {
+            id: 8,
+            title: "Trinetra",
+            category: "AI / Healthcare",
+            tech: ["HTML", "CSS", "JavaScript", "Gemini API", "Twilio"],
+            github: "https://github.com/Akshays-2005/Trinetra-AI-Medical-Assistant",
+            demo: "https://trinetra2.netlify.app/",
+            image: Trinetra,
+            description:
+                "AI-powered medical assistant that analyzes symptoms, classifies urgency levels, recommends doctors, and sends appointment reminders."
         }
     ];
 
@@ -119,23 +119,26 @@ const Projects = () => {
         <div className="projects-container">
             <h2>Projects</h2>
             <div className="project-grid">
-            {projects.map((project) => (
-                <div key={project.id} className="project-card">
-                    <img src={project.image} alt={project.title} />
+                {projects.map((project) => (
+                    <div key={project.id} className="project-card">
+                        <img src={project.image} alt={project.title} />
 
-                    <h3>{project.title}</h3>
+                        <h3>{project.title}</h3>
 
-                    <p>{project.description}</p>
+                        <p>{project.description}</p>
 
-                    <div className="tech-stack">
-                        {project.tech.map((tech) => (
-                            <span key={tech}>{tech}</span>
-                        ))}
+                        <div className="tech-stack">
+                            {project.tech.map((tech) => (
+                                <span key={tech}>{tech}</span>
+                            ))}
+                        </div>
+
+                        <div className="links">
+                            <a href={project.github}>GitHub</a>
+                            {project.demo && <a href={project.demo}>Demo</a>}
+                        </div>
                     </div>
-
-                    <a href={project.github}>GitHub</a>
-                </div>
-            ))}
+                ))}
             </div>
         </div>
     );

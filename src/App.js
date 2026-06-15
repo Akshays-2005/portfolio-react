@@ -7,6 +7,7 @@ import Projects from './Projects';
 import Education from './Education';
 import NotFound from './NotFound';
 import Certificates from './Certificates';
+import Contact from './Contact';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
               </Route>
               <Route path="/certificates">
                 <Certificates/>
+              </Route>
+              <Route path="/contact">
+                <Contact />
               </Route>
               <Route path="*">
                 <NotFound />
