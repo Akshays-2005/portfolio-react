@@ -1,5 +1,5 @@
 import EduBuddy from './assets/images/EduBuddy.png';
-import Trinetra from './assets/images/Trinetra.png';
+// import Trinetra from './assets/images/Trinetra.png';
 import FarmAI from './assets/images/FarmAI.png';
 import HeartDisease from './assets/images/Heart_disease.png';
 import FoodOrdering from './assets/images/Food_ordering.png';
@@ -15,7 +15,7 @@ const Projects = () => {
             id: 1,
             title: "EduBuddy",
             category: "AI / Hackathon",
-            tech: ["HTML", "CSS", "JavaScript", "Gemini API"],
+            tech: ["HTML", "CSS", "JavaScript", "Gemini API","Django"],
             github: "https://github.com/Akshays-2005/EduBuddy-Study-Assistant",
             demo: "https://alpha345.pythonanywhere.com/",
             image: EduBuddy,
@@ -27,14 +27,7 @@ const Projects = () => {
             title: "FarmAI",
             category: "AI / Agriculture",
             tech: [
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "Node.js",
-                "Python",
-                "OpenWeather API",
-                "Agmarknet API"
-            ],
+                "React","TailwindCSS","Node.js","Python","OpenWeather API","Agmarknet API"],
             github: "https://github.com/Akshays-2005/FarmAI",
             demo: "https://drive.google.com/file/d/1hDVCdpgQGv7_CIusTN8kHLwOAL9gM3WH/view",
             image: FarmAI,
@@ -97,7 +90,7 @@ const Projects = () => {
             id: 7,
             title: "AutoAlign Doc",
             category: "Document Automation / Frontend",
-            tech: ["HTML", "CSS", "JavaScript"],
+            tech: ["React","TailwindCSS", "JavaScript","Opencv"],
             github: "https://github.com/Akshays-2005/autoscan-pro",
             demo: "https://autoalign-doc.netlify.app/",
             image: AutoAlignDoc,
@@ -119,24 +112,24 @@ const Projects = () => {
             id: 9,
             title: "DigiMelody",
             category: "Web Development",
-            tech: ["HTML", "CSS", "JavaScript"],
+            tech: ["HTML", "CSS", "JavaScript","Node.js","Express.js","Mongodb"],
             github: "https://github.com/Akshays-2005/DigiMelody",
             demo: "https://drive.google.com/file/d/1e_CyeuOBubThx5UsDMchBBM730wk8LrB/view?usp=sharing",
             image: DigiMelody,
             description:
                 "A modern music streaming-inspired web application featuring an intuitive user interface, music discovery experience, responsive layouts, and interactive media controls."
-        },
-        {
-            id: 10,
-            title: "Trinetra",
-            category: "AI / Healthcare",
-            tech: ["HTML", "CSS", "JavaScript", "Gemini API", "Twilio"],
-            github: "https://github.com/Akshays-2005/Trinetra-AI-Medical-Assistant",
-            demo: "https://trinetra2.netlify.app/",
-            image: Trinetra,
-            description:
-                "AI-powered medical assistant that analyzes symptoms, classifies urgency levels, recommends doctors, and sends appointment reminders."
         }
+        // {
+        //     id: 10,
+        //     title: "Trinetra",
+        //     category: "AI / Healthcare",
+        //     tech: ["HTML", "CSS", "JavaScript", "Gemini API", "Twilio"],
+        //     github: "https://github.com/Akshays-2005/Trinetra-AI-Medical-Assistant",
+        //     demo: "https://trinetra2.netlify.app/",
+        //     image: Trinetra,
+        //     description:
+        //         "AI-powered medical assistant that analyzes symptoms, classifies urgency levels, recommends doctors, and sends appointment reminders."
+        // }
     ];
 
     return (
