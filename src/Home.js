@@ -10,7 +10,7 @@ const Home = () => {
                     <h2>Akshay S</h2>
                     <p>Full Stack Developer | AI Enthusiast | Problem Solver</p>
                     <div className="links">
-                        <a className="resume-btn" href="https://drive.google.com/file/d/1yp_3_fsrY-6MmP8i7f6qHN9mGCjdq2bN/view" target="_blank" rel="noopener noreferrer">Resume</a>
+                        <a className="resume-btn" href="https://drive.google.com/file/d/12mNvhN60IRziItLe5Q7qcoiHJcmHgByV/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
                         <a href="https://github.com/Akshays-2005" target="_blank" rel="noopener noreferrer" aria-label="GitHub" ><FaGithub size={35} className="social-icon" /></a>
                         <a href="https://www.linkedin.com/in/akshay-s-962494354/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" ><FaLinkedinIn size={35} className="social-icon linkedin" /></a>
                         <a href="https://leetcode.com/u/Akshays-2005/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode" ><SiLeetcode size={35} className="social-icon leetcode" /></a>
