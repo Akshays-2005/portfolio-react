@@ -4,38 +4,37 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import dns from 'dns';
 
-// Force Node.js DNS to resolve IPv4 addresses first
-dns.setDefaultResultOrder('ipv4first'); 
-
 const app = express();
 dotenv.config();
-app.use(cors());    
+app.use(cors());
 app.use(express.json());
 const port = process.env.PORT || 5000;
 
 const transporter = nodemailer.createTransport({
-    host:'smtp.gmail.com',
-    port:587,
-    secure:false,
-    // service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
     auth: {
         user: process.env.EMAIL,
         pass: process.env.PASSWORD
     },
-    tls:{
+    tls: {
         rejectUnauthorized: false
+    },
+    // Force IPv4 lookup directly in the socket
+    lookup: (hostname, options, callback) => {
+        dns.lookup(hostname, { family: 4 }, callback);
     }
 });
 
 // Verify SMTP connection on startup
 transporter.verify((error, success) => {
-  if (error) {
-    console.error('SMTP Connection Error:', error);
-  } else {
-    console.log('Ready to send messages');
-  }
+    if (error) {
+        console.error('SMTP Connection Error:', error);
+    } else {
+        console.log('Ready to send messages');
+    }
 });
-
 
 app.post('/send-email', async (req, res) => {
     const { name, email, subject, message } = req.body;
@@ -44,7 +43,7 @@ app.post('/send-email', async (req, res) => {
             from: process.env.EMAIL,
             to: process.env.EMAIL,
             replyTo: email,
-            subject:`Portfolio Contact: ${subject}`,
+            subject: `Portfolio Contact: ${subject}`,
             text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
         });
         res.status(200).json({ message: 'Email sent successfully' });
@@ -52,7 +51,7 @@ app.post('/send-email', async (req, res) => {
         console.error('Error sending email:', error);
         res.status(500).json({ message: 'Error sending email' });
     }
-})
+});
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
