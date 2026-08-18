@@ -2,6 +2,10 @@ import express from 'express';
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import dns from 'dns';
+
+// Force Node.js DNS to resolve IPv4 addresses first
+dns.setDefaultResultOrder('ipv4first'); 
 
 const app = express();
 dotenv.config();
@@ -12,11 +16,14 @@ const port = process.env.PORT || 5000;
 const transporter = nodemailer.createTransport({
     host:'smtp.gmail.com',
     port:587,
-    secure:true,
+    secure:false,
     // service: 'gmail',
     auth: {
         user: process.env.EMAIL,
         pass: process.env.PASSWORD
+    },
+    tls:{
+        rejectUnauthorized: false
     }
 });
 
